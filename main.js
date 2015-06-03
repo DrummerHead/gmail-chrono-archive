@@ -22,7 +22,7 @@ var addressesAndExpiration = [
 ];
 
 var MILIS_PER_DAY = 1000 * 60 * 60 * 24;
-var NOW_DATE = new Date();
+var nowDate = new Date();
 
 function isMailContained(sample, mail){
   return (function(sample, mail){
@@ -35,7 +35,7 @@ function isMailContained(sample, mail){
 }
 
 function haveNDaysPassed(days, date){
-  return date.getTime() + days * MILIS_PER_DAY <= NOW_DATE.getTime();
+  return date.getTime() + days * MILIS_PER_DAY <= nowDate.getTime();
 }
 
 function isOld(message){
