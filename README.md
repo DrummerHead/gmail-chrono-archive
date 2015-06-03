@@ -7,18 +7,18 @@ There are mails you want to receive, there are mails you don't, and then there a
 
 1. Go to https://script.google.com/
 2. In the column "Create script for" click on "Blank Project"
-3. Copy the [contents of chronoarchive.js]() to the file
+3. Copy the [contents of chronoarchive.js](https://raw.githubusercontent.com/DrummerHead/gmail-chrono-archive/master/chronoarchive.js) to the file
 4. Customize the list of emails and their expiration days to your liking from the variable "addressesAndExpiration"
 5. Click on "File" menu item and then "Save". The name can be "gmail-chrono-archive" or whatever you want.
 6. Click on "Resources" menu item and then "Current project's triggers", a modal will show up. Click on "No triggers set up. Click here to add one now."
 7. In "Run" choose "checkOldEphemeralMail", in "Events" choose "Time-driven", "Hour timer", "Every 12 hours". You can make it more frequent but it's unnecessary. Click "Save".
-8. It will inform you that the App needs authorization. It will need to "View and manage your mail". [Read the code]() to make sure everything is safe and then click "Accept". Always make sure you know what you're allowing access to your email, don't be a dingus.
+8. It will inform you that the App needs authorization. It will need to "View and manage your mail". [Read the code](https://github.com/DrummerHead/gmail-chrono-archive/blob/master/chronoarchive.js) to make sure everything is safe and then click "Accept". Always make sure you know what you're allowing access to your email, don't be a dingus.
 9. Brew some coffee and brag with your coworkers about how efficient you are, because this is officially done!
 
 
 # I'd like to know what changes are being done to my inbox
 
-Indeed you do. To get a notification email every time the script runs with a rundown of what emails were archived, follow the previous steps but instead of using chronoarchive.js use [chronoarchive-with-logs.js](). But be warned that these mails will eventually get annoying and actually go against the grain of what you want to achieve here (a less cluttered inbox).
+Indeed you do. To get a notification email every time the script runs with a rundown of what emails were archived, follow the previous steps but instead of using chronoarchive.js use [chronoarchive-with-logs.js](https://raw.githubusercontent.com/DrummerHead/gmail-chrono-archive/master/chronoarchive-with-logs.js). But be warned that these mails will eventually get annoying and actually go against the grain of what you want to achieve here (a less cluttered inbox).
 
 
 # I want to make changes to the script
