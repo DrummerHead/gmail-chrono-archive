@@ -48,12 +48,26 @@ function isOld(message){
   }
 }
 
+function mailLogs(){
+  MailApp.sendEmail(Session.getActiveUser().getEmail(), "Ephemeral logs", Logger.getLog());
+}
+
 function checkOldEphemeralMail() {
   var inbox = GmailApp.getInboxThreads();
+
   for(var i = 0, j = inbox.length; i < j; i++){
     var message = inbox[i].getMessages()[0];
+
+    Logger.log(message.getFrom());
+    Logger.log(message.getSubject());
+    Logger.log(message.getDate());
+
     if(isOld(message)){
       inbox[i].moveToArchive();
+      Logger.log("*** old ephemeral mail moved to archive ***");
     }
+    Logger.log("= = = = = = = =\n");
   }
+
+  mailLogs();
 }
